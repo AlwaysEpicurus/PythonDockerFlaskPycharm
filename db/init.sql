@@ -1,5 +1,5 @@
 CREATE DATABASE fordData;
-use zillowData;
+use fordData;
 
 CREATE TABLE IF NOT EXISTS tblFordImport (
     `id` int AUTO_INCREMENT,
