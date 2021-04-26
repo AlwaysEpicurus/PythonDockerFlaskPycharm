@@ -1,22 +1,19 @@
-CREATE DATABASE citiesData;
-use citiesData;
+CREATE DATABASE fordData;
+use zillowData;
 
-CREATE TABLE IF NOT EXISTS tblCitiesImport (
-    "Index" INT(11),
-    "Living Space (sq ft)" DECIMAL(10, 2),
-    "Beds" DECIMAL(10, 2),
-    "Baths" DECIMAL(10, 2),
-    "Zip" DECIMAL(10, 2),
-    "Year" DECIMAL(10, 2),
-    "List Price ($)" DECIMAL(10, 2)
-    PRIMARY KEY ("Index")
+CREATE TABLE IF NOT EXISTS tblFordImport (
+    `id` int AUTO_INCREMENT,
+    `year` NUMERIC(4, 4),
+    `mileage` NUMERIC(2, 1),
+    `price` NUMERIC(7, 4),
+    PRIMARY KEY (`id`)
 );
-INSERT INTO tblCitiesImport VALUES
-(1, 2222, 3, 3.5, 32312, 1981, 250000);
-(2, 1628, 3, 2, 32308, 2009, 185000);
-(3, 3824, 5, 4, 32312, 1954, 399000);
-(4, 1137, 3, 2, 32309, 1993, 150000);
-(7, 3631, 4, 3, 32309, 1996, 649000);
-(8, 2483, 4, 3, 32312, 2016, 399000);
-(9, 2400, 4, 4, 32312, 2002, 613000);
-(10, 1997, 3, 3, 32311, 2006, 295000);
+INSERT INTO tblFordImport (year,mileage,price) VALUES
+(1998, 27, 9991);
+(1997, 17, 992500);
+(1998, 28, 10491);
+(1998, 5, 10990);
+(1997, 38, 9493);
+(1997, 36, 9991);
+(1997, 24, 10490);
+(1997, 37, 9491);
