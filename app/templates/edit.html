@@ -1,21 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/edit/{{ford.id}}" method="post">
+<form action="/edit/{{city.id}}" method="post">
     <div class="row">
         <div class="col">
             <label for="year">Year</label>
-            <input id="year" type="text" class="form-control" placeholder="Year" name="year"
-                   value="{{ford.year}}">
+            <input id="year" type="text" class="form-control" placeholder="City Name" name="year" value="{{city.year}}">
         </div>
+    </div>
+
+    <div class="row">
         <div class="col">
-            <label for="mileage">Mileage (thousands)</label>
-            <input id="mileage" type="text" class="form-control" placeholder="Mileage"
-                   name="mileage" value="{{ford.mileage}}">
+            <label for="mileage">Mileage</label>
+            <input id="mileage" type="text" class="form-control" placeholder="City Latitude" name="mileage" value="{{city.mileage}}">
         </div>
         <div class="col">
             <label for="price">Price</label>
-            <input id="price" type="text" class="form-control" placeholder="City Country" name="price"
-                   value="{{ford.price}}">
+            <input id="price" type="text" class="form-control" placeholder="City Longitude" name="price" value="{{city.price}}">
         </div>
     </div>
     <button type="submit" class="btn btn-success">Save</button>

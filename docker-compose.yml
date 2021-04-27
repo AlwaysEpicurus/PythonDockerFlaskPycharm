@@ -2,18 +2,20 @@ version: "3.9"
 services:
   app:
     build: ./app
-    container_name: "Flask_App_Ford_1"
+    container_name: "Flask_App_f4"
     links:
+      - db
+    depends_on:
       - db
     ports:
       - "5000:5000"
 
   db:
     image: mysql:5.7
-    container_name: "MySQL_Database_Ford"
+    container_name: "MySQL_Database_f4"
     ports:
       - "32000:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - ./db:/docker entrypoint-initdb.d/:ro
+      - ./db:/docker-entrypoint-initdb.d/:ro

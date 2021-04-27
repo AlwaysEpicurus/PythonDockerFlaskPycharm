@@ -1,15 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/ford/new" method="POST">
+<form action="/cities/new" method="POST">
     <div class="row">
         <div class="col">
             <label for="year">Year</label>
             <input id="year" type="text" class="form-control" placeholder="Year" name="year">
         </div>
+    </div>
+
+    <div class="row">
         <div class="col">
             <label for="mileage">Mileage (thousands)</label>
-            <input id="mileage" t ype="text" class="form-control" placeholder="Mileage (thousands)
-                   name="mileage">
+            <input id="mileage" type="text" class="form-control" placeholder="Mileage" name="mileage">
         </div>
         <div class="col">
             <label for="price">Price</label>

@@ -11,9 +11,9 @@
     <tbody>
     {% for city in cities %}
     <tr>
-        <td><a href="view/{{ford.id}}">{{ ford.year }}</a></td>
-        <td>{{ ford.mileage }}</td>
-        <td>{{ ford.price }}</td>
+        <td><a href="view/{{city.id}}">{{ city.year }}</a></td>
+        <td>{{ city.mileage }}</td>
+        <td>{{ city.price }}</td>
     </tr>
     {% endfor %}
     </tbody>
